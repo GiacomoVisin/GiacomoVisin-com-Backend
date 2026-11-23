@@ -43,14 +43,16 @@
 .brand-dot {
     width: 10px;
     height: 10px;
-    background-color: #10b981; /* Pallino verde "online/attivo" */
+    background-color: #10b981;
+    /* Pallino verde "online/attivo" */
     border-radius: 50%;
     display: inline-block;
     box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
 }
 
 .brand-ext {
-    color: #6366f1; /* Accento indaco */
+    color: #6366f1;
+    /* Accento indaco */
     margin-right: 1rem;
     margin-left: -0.5rem;
 }
@@ -107,7 +109,23 @@
         flex-direction: column;
         gap: 0.8rem;
     }
+
     .navbar-menu {
         gap: 1.2rem;
     }
+}
+
+
+.imgBox {
+    width: 5rem;
+    height: 5rem;
+    background-image: url('/public/img/spiderman.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: cover;
+    border: 1px solid black;
+    border-radius: 50%;
+    position:relative;
+    left: 500px;
 }
