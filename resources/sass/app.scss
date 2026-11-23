@@ -5,4 +5,109 @@
 @import 'variables';
 
 // Bootstrap
+
 @import 'bootstrap/scss/bootstrap';
+
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #eaeaea;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.navbar-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo personale */
+.navbar-brand {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #1e293b;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: -0.5px;
+}
+
+.brand-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #10b981; /* Pallino verde "online/attivo" */
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+}
+
+.brand-ext {
+    color: #6366f1; /* Accento indaco */
+    margin-right: 1rem;
+    margin-left: -0.5rem;
+}
+
+/* Lista link */
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: #475569;
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+    padding: 6px 2px;
+    transition: color 0.2s ease;
+}
+
+/* Effetto sottolineatura animata al passaggio del mouse */
+.navbar-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2.5px;
+    bottom: 0;
+    left: 0;
+    background-color: #6366f1;
+    border-radius: 2px;
+    transition: width 0.25s ease;
+}
+
+.navbar-link:hover {
+    color: #1e293b;
+}
+
+.navbar-link:hover::after,
+.navbar-link.active::after {
+    width: 100%;
+}
+
+.navbar-link.active {
+    color: #6366f1;
+    font-weight: 600;
+}
+
+/* Adattamento base per smartphone */
+@media (max-width: 600px) {
+    .navbar-container {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    .navbar-menu {
+        gap: 1.2rem;
+    }
+}
