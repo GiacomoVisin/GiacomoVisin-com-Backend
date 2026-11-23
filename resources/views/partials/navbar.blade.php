@@ -18,12 +18,16 @@
         <ul class="navbar-menu">
             @foreach ($elements as $element)
                 <li class="navbar-item">
-                    <a href="{{ $element['url'] }}" 
-                       class="navbar-link {{ request()->is(ltrim($element['url'], '/')) ? 'active' : '' }}">
+                    <a href="{{ $element['url'] }}"
+                        class="navbar-link {{ request()->is(ltrim($element['url'], '/')) ? 'active' : '' }}">
                         {{ $element['label'] }}
                     </a>
                 </li>
             @endforeach
+
         </ul>
+        <div class="imgBox">
+           <!--  <img src="{{ asset('/img/spiderman.jpg') }}" alt="spider"> -->
+        </div>
     </div>
 </nav>
