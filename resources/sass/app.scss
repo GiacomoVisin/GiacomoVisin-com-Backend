@@ -155,7 +155,7 @@
 /* Effetto al passaggio del mouse */
 .imgBox:hover {
     transform: translateY(-6px);
-    /* Solleva leggermente tutta la card */
+    /* Solleva leggermente tutta l img */
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.22);
     /* Ombra più profonda */
 }
@@ -179,7 +179,7 @@
     /* Più flessibile e responsive rispetto a width fissa */
     background-color: #ffffff;
     border: 1px solid #e2e8f0;
-    /* Grigio chiaro elegante al posto del nero puro */
+    /* Grigio chiaro elegante  */
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     /* Ombra morbida */
@@ -219,11 +219,6 @@
     color: #1e293b;
     border-bottom: 1px solid #f1f5f9;
     transition: background-color 0.2s ease;
-}
-
-/* Rimuove il bordo dall'ultima riga per pulizia */
-.tableSocial tbody tr:last-child td {
-    border-bottom: none;
 }
 
 /* Effetto hover sulla riga */
