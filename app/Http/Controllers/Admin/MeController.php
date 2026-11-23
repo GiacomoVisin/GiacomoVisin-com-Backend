@@ -7,18 +7,18 @@ use Illuminate\Http\Request;
 
 class MeController extends Controller
 {
-    public function ChiSono()
+    public function chiSono()
     {
         return view('me.chi-sono');
     }
 
 
-    public function Formazione()
+    public function formazione()
     {
         return view('me.formazione');
     }
 
-    public function Progettini()
+    public function progettini()
     {
         return view('me.progettini');
     }
