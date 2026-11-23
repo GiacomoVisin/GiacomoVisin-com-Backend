@@ -27,7 +27,7 @@
 
         </ul>
         <div class="imgBox">
-           <!--  <img src="{{ asset('/img/spiderman.jpg') }}" alt="spider"> -->
         </div>
+
     </div>
 </nav>
