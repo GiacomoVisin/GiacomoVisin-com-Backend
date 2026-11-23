@@ -1,11 +1,29 @@
-<?php 
+@php
+    $elements = [
+        ['label' => 'Chi sono', 'url' => '/chi-sono'],
+        ['label' => 'Formazione', 'url' => '/formazione'],
+        ['label' => 'Progettini ✨', 'url' => '/progettini'],
+    ];
+@endphp
 
-$elements = ["chi-sono, Formazione, Progettini"]
+<nav class="navbar">
+    <div class="navbar-container">
+        <!-- Logo / Nome a sinistra -->
+        <a href="/chi-sono" class="navbar-brand">
+            <span class="brand-dot"></span>
+            GiacomoVisin<span class="brand-ext">.com</span>
+        </a>
 
-?>
-
-<ul>
-    @foreach ($elements as $element)
-        <li>{{ $element }}</li>
-    @endforeach
-</ul>
+        <!-- Voci di menu -->
+        <ul class="navbar-menu">
+            @foreach ($elements as $element)
+                <li class="navbar-item">
+                    <a href="{{ $element['url'] }}" 
+                       class="navbar-link {{ request()->is(ltrim($element['url'], '/')) ? 'active' : '' }}">
+                        {{ $element['label'] }}
+                    </a>
+                </li>
+            @endforeach
+        </ul>
+    </div>
+</nav>
